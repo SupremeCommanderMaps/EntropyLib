@@ -30,12 +30,6 @@ function newUnitCreator()
             0
         )
 
-        unit:SetVeterancy(5)
-
-        if EntityCategoryContains(categories.AIR - categories.EXPERIMENTAL, unit) then
-            unit:SetFuelUseTime(9999)
-        end
-
         runOnUnitCreated(unit, unitInfo)
 
         return unit
