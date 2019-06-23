@@ -2,7 +2,7 @@ Common lua code for FAF maps
 
 Most files contain classes that can be instantiated via the newInstance constructor.
 
-```
+```lua
 local myTextPrinter = import('some/path/TextPrinter.lua').newInstance()
 
 myTextPrinter.print("hello")
