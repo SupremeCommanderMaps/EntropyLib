@@ -4,6 +4,9 @@ Most files contain classes that can be instantiated via the newInstance construc
 
 ```
 local myTextPrinter = import('some/path/TextPrinter.lua').newInstance()
+
+myTextPrinter.print("hello")
+myTextPrinter.print("world")
 ```
 
 The public interface of the class can be found by looking at the return value of `newInstance`.
