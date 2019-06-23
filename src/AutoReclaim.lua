@@ -1,3 +1,5 @@
+-- Automatically grant mass and energy to players for each unit they killed
+-- massMultiplier 0.5 gives 50% of the killed mass value
 function AutoResourceThread(massMultiplier, energyMultiplier)
 	local previousMass = {}
 	local previousEnergy = {}

@@ -1,3 +1,4 @@
+-- Service for creating circular symmetrical bases
 newInstance = function(baseCenter, baseOwnerName)
     local spawnUnit = function(blueprintName, armyName, x, y, yawInRadians)
         return CreateUnitHPR(blueprintName, armyName, x, 25.984375, y, 0, yawInRadians or 0, 0)

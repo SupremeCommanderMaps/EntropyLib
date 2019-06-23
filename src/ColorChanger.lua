@@ -1,3 +1,4 @@
+-- Continuously changes the color of the army
 function newInstance(armyName)
     local this = {}
 

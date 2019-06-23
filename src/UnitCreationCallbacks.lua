@@ -1,3 +1,6 @@
+-- Service that allows for executing code upon all unit creation.
+-- Warning: when an unit is captured it will be detected as a new unit
+-- Forum thread: https://forums.faforever.com/viewtopic.php?f=53&t=16598
 function newInstance(ScenarioInfo)
     local callbacks = {}
     local knownEntityIds = {}

@@ -1,3 +1,4 @@
+-- Convenient access to map center and corner coordinates
 function newInstance(ScenarioInfo)
     local this = {}
 

@@ -1,3 +1,4 @@
+-- Service for dynamically creating hydros and mexes
 newInstance = function()
     return {
         createHydro = function(positionVector)

@@ -1,5 +1,6 @@
 import('/lua/SimSync.lua')
 
+-- Message printing service. Object orientated replacement for PrintText featuring named parameters.
 newInstance = function()
     local function print(str, options)
         options = options or {}

@@ -1,3 +1,4 @@
+-- Null implementation of the TextPrinter interface
 newInstance = function()
     return {
         print = function(str, options) end,

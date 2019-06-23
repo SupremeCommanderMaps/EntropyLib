@@ -1,4 +1,3 @@
-
 -- Unit creation service that can be used to create a seam for behavior modification of all constructed units.
 function newUnitCreator()
     local this = {}
