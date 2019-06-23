@@ -40,7 +40,7 @@ function newUnitCreator()
         return unit
     end
 
-    -- Callbacks are invoked with the unitInfo map.
+    -- Callbacks are invoked with the unitInfo map. Invocation happens before the create method returns.
     -- Additional values in unitInfo provided in the create method are preserved.
     this.onUnitCreated = function(callback)
         table.insert(onUnitCreated, callback)
