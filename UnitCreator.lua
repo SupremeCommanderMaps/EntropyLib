@@ -1,7 +1,5 @@
 
--- Creates a new unit and invokes the set callbacks (event handlers) such as "on unit created"
--- Units are constructed from an unitInfo map and callbacks are invoked with the constructed unit and this map.
--- The map can contain flags and info for the callbacks, so the callbacks know if they should run and how to run.
+-- Unit creation service that can be used to create a seam for behavior modification of all constructed units.
 function newUnitCreator()
     local this = {}
     local onUnitCreated = {}
@@ -12,7 +10,14 @@ function newUnitCreator()
         end
     end
 
-    -- General creation function. Use a more specific one (below) if possible
+    -- Creates a new unit and then invokes the set onUnitCreated callbacks/"event handlers".
+    -- unitCreator.create({
+    --     armyName = "ARMY_1",
+    --     blueprintName = "uaa0107",
+    --     x = 42,
+    --     y = 42
+    -- })
+    -- Optional parameters: z, yawInRadians
     this.create = function(unitInfo)
         unitInfo.blueprintName = unitInfo.blueprintName or unitInfo[1]
         unitInfo.armyName = unitInfo.armyName or unitInfo[2]
@@ -35,13 +40,8 @@ function newUnitCreator()
         return unit
     end
 
-    -- Create a unit with the "isSurvivalSpawned" flag
-    -- These are units send in to fight the players
-    this.spawnSurvivalUnit = function(unitInfo)
-        unitInfo.isSurvivalSpawned = true
-        return this.create(unitInfo)
-    end
-
+    -- Callbacks are invoked with the unitInfo map.
+    -- Additional values in unitInfo provided in the create method are preserved.
     this.onUnitCreated = function(callback)
         table.insert(onUnitCreated, callback)
     end
