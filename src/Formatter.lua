@@ -23,7 +23,7 @@ function formatTime(seconds)
     return seconds .. " seconds"
 end
 
-local function inTimeString(seconds)
+function inTimeString(seconds)
     if seconds == 0 then
         return "immediately"
     end
