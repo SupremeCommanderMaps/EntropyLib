@@ -24,7 +24,7 @@ function formatTime(seconds)
 end
 
 local function inTimeString(seconds)
-    if seconds == 0
+    if seconds == 0 then
         return "immediately"
     end
 
