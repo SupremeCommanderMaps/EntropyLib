@@ -1,5 +1,7 @@
 # EntropyLib
 
+[![Build Status](https://travis-ci.org/JeroenDeDauw/EntropyLib.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/EntropyLib)
+
 A Lua library for [Supreme Commander Forged Alliance Forever][FAF].
 
 This library was created based on often needed code in survival maps.
@@ -22,8 +24,6 @@ This means to understand the code within a class you likely want to start at the
 the top might have a number of low level private functions.
 
 ## Updates and contributing
-
-[![Build Status](https://travis-ci.org/JeroenDeDauw/EntropyLib.svg?branch=master)](https://travis-ci.org/JeroenDeDauw/EntropyLib)
 
 You can find the latest version of the library on the [EntropyLib GitHub project][GitHub], which is
 also the place where you can file issues, post feature request, and submit patches.
