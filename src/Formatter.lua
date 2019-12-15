@@ -24,15 +24,15 @@ local function formatSeconds(seconds)
 end
 
 function formatTime(seconds)
+	if seconds ~= 0 and isDivisibleBy(seconds, 60) then
+		return formatMinutes(seconds / 60)
+	end
+
 	if seconds > 120 then
 		return formatMinutes(math.floor(seconds / 60))
 			.. " and "
 			.. formatSeconds(remainder(seconds, 60))
 	end
-
-    if seconds ~= 0 and isDivisibleBy(seconds, 60) then
-        return formatMinutes(seconds / 60)
-    end
 
     return formatSeconds(seconds)
 end

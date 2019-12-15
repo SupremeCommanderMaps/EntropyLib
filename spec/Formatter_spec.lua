@@ -58,6 +58,13 @@ describe("Formatter", function()
 				Formatter.formatTime(601)
 			)
 		end)
+
+		it("handles many minutes", function()
+			assert.are.equal(
+				"11 minutes",
+				Formatter.formatTime(660)
+			)
+		end)
 	end)
 
 
