@@ -15,12 +15,26 @@ function formatMultiplier(x)
     return math.floor(x * 100) .. "%"
 end
 
+local function formatMinutes(minutes)
+	return minutes .. " minute" .. (minutes == 1 and "" or "s")
+end
+
+local function formatSeconds(seconds)
+	return seconds .. " second" .. (seconds == 1 and "" or "s")
+end
+
 function formatTime(seconds)
-    if isDivisibleBy(seconds, 60) then
-        return (seconds / 60) .. " minutes"
+	if seconds > 120 then
+		return formatMinutes(math.floor(seconds / 60))
+			.. " and "
+			.. formatSeconds(remainder(seconds, 60))
+	end
+
+    if seconds ~= 0 and isDivisibleBy(seconds, 60) then
+        return formatMinutes(seconds / 60)
     end
 
-    return seconds .. " seconds"
+    return formatSeconds(seconds)
 end
 
 function inTimeString(seconds)
@@ -30,3 +44,9 @@ function inTimeString(seconds)
 
     return "in " .. formatTime(seconds)
 end
+
+return {
+	formatMultiplier = formatMultiplier,
+	formatTime = formatTime,
+	inTimeString = inTimeString,
+}
