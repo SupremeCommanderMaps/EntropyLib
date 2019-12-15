@@ -11,10 +11,10 @@ This library was created based on often needed code in survival maps.
 Most files contain classes that can be instantiated via the newInstance constructor.
 
 ```lua
-local myTextPrinter = import('some/path/TextPrinter.lua').newInstance()
+local textPrinter = import('some/path/TextPrinter.lua').newInstance()
 
-myTextPrinter.print("hello")
-myTextPrinter.print("world")
+textPrinter.print("hello")
+textPrinter.print("world")
 ```
 
 The public interface of the class can be found by looking at the return value of `newInstance`.
