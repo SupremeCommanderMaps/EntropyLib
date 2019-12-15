@@ -1,6 +1,6 @@
 describe("EventDispatcher", function()
 
-    local EventDispatcher = require "src/lib/EventDispatcher"
+    local EventDispatcher = require "src/EventDispatcher"
 
     it("passes arguments given to fire", function()
         local events = EventDispatcher:new{}
