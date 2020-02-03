@@ -1,14 +1,17 @@
 newInstance = function(textPrinter, defaultSize)
     local function print(message, color, duration)
-        textPrinter.print(
-            string.rep(" ", 12) .. message,
-            {
-                color = color,
-                duration = duration or 4,
-                size = defaultSize or 30,
-                location = "leftcenter"
-            }
-        )
+        local options = {
+            color = color,
+            duration = duration or 4,
+            size = defaultSize or 30,
+            location = "lefttop"
+        }
+
+        textPrinter.print("", options)
+        textPrinter.print("", options)
+        textPrinter.print("", options)
+        textPrinter.print("", options)
+        textPrinter.print(string.rep(" ", 100) .. message, options)
     end
 
     local function warning(message, durationInSeconds)
