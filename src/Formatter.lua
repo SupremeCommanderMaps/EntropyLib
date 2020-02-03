@@ -8,11 +8,13 @@ end
 
 -- Does not format fractional percents
 function formatMultiplier(x)
-    if x > 3 and isDivisibleBy(x, 1) then
-        return x .. "x"
-    end
+	x = tonumber(string.format("%." .. 2 .. "f", x))
 
-    return math.floor(x * 100) .. "%"
+	if x > 3 and isDivisibleBy(x, 1) then
+		return x .. "x"
+	end
+
+    return string.format("%.f", x * 100) .. "%"
 end
 
 local function formatMinutes(minutes)
