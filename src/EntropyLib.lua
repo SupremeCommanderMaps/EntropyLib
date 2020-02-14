@@ -19,6 +19,10 @@ newInstance = function(libPath)
         )
     end
 
+    this.newUnitRevealer = function(armyNames)
+        return libImport('UnitRevealer.lua').newInstance(armyNames)
+    end
+
     -- To prevent default spawning you need: ScenarioUtils.CreateResources = function() end
     -- mapEditorTables is an import of the _tables.lua file created by the FAF map editor
     -- playerArmyNamesToIndexMap is optional. Format: {ARMY_1 = 1, ARMY_2 = 2}
