@@ -34,6 +34,18 @@ newInstance = function(libPath)
         )
     end
 
+    this.autoReclaimThreadFunction = function()
+        return libImport('AutoReclaim.lua').AutoResourceThread
+    end
+
+    this.newUnitBuffer = function()
+        return libImport('UnitBuff.lua')
+    end
+
+    this.newFormatter = function()
+        return libImport('Formatter.lua')
+    end
+
     return this
 end
 
