@@ -46,6 +46,10 @@ newInstance = function(libPath)
         return libImport('Formatter.lua')
     end
 
+    this.newAllFactions = function()
+        return libImport('AllFactions.lua')
+    end
+
     return this
 end
 
