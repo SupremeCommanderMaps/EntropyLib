@@ -38,6 +38,8 @@ If you have Docker and Docker Compose installed, you can run the tests with
 
     docker-compose run --rm app busted
 
+Or use `make`
+
 [FAF]: http://www.faforever.com/
 [GitHub]: https://github.com/JeroenDeDauw/EntropyLib/
 [Busted]: http://olivinelabs.com/busted/
